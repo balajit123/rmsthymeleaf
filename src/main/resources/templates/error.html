@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>RMS Spring Boot Thymeleaf Application</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">RMS</a>
+</nav>
+
+<main role="main" class="container">
+
+    <div class="container">
+        <div class="col-md-8 col-md-offset-2">
+            <h2 class="title">Calculate the days between two dates</h2>
+            <form method="post" th:action="@{/}" th:object="${formBean}">
+
+                <div class="form-group col-xs-4">
+                    <span th:text="${result}"/>
+                </div>
+                <span><a href="/" th:url="@{/}" > Go Back</a></span>
+            </form>
+        </div>
+    </div>
+
+</main>
+
+
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
